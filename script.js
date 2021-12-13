@@ -19,41 +19,34 @@ window.onload = function() {
 span.onclick = function() {
     modal.style.display = "none";
 }
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display ="none";
     }
-}
+};
 
 /* About Button */
-// get the modal
 
-let modal_About = document.getElementById("modal-about");
 
-// get the button that opens the modal
-let aboutButton = document.querySelector(".about");
+/* Timer */
+const startingMinute = 1;
+let time = startingMinute * 60;
+const countdownEl = document.getElementById("countdown");
 
-// get the <span> element that closes the modal
-let spanAbout = document.querySelector(".closeAbout");
+setInterval(updateCountdown, 1000);
 
-// when the user click on the button, open the modal
-aboutButton.onclick = function() {
-    modal_About.style.display ="block";
-}
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
 
-// When the user clicks on <span> (x), close the modal
-window.onload = function() {
-    spanAbout.onclick = function() {
-    modal_About.style.display = "none";
-}
-}
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal_About) {
-        modal_About.style.display ="none";
-    }
-}
+    countdownEl.innerHTML = `${minutes}:${seconds}`;
+    time--; 
+    time = time < 0 ? 0 : time;
+};
+
+
