@@ -49,4 +49,7 @@ function updateCountdown() {
     time = time < 0 ? 0 : time;
 };
 
+/* Move the Title */
+const title = document.querySelector("h1");
+
 

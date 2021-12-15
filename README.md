@@ -24,7 +24,13 @@
     -the game needs to end once why the timer goes off (if the user doesn't finish the game before)
 
 -set up variables
+    -winning conditions
+
 -set up functions
+    -reset function
+        -resets the game back to empty
+        -changes gameActive to true
+        -clears our 
 
 -user stories
     -As a user, I want to click to start playing
@@ -40,11 +46,11 @@
 
 
 -cities
-    Start - Seattle
+    Start - Seattle -- 
           - Bueno Aires, Argentina
-          - Barcelona, Spain
-          - Cairo, Egypt
-          - Helsinki, Finland (Helsinki Cathedral)
+          - Barcelona, Spain --
+          - Cairo, Egypt --
+          - Switzerland --
           - Ulaanbaatar, Mongolia
           - Bergamo, Italy
           - Seoul, South Korea
