@@ -83,10 +83,10 @@ startBtn.addEventListener("click", function() {
     instructionButton.style.display = "none";
     abtButton.style.display ="none";
     bodyBg.style.backgroundImage= "url('images/cappadocia - the one.jpeg')";
+    title.style.color = "brown";
+    title.style.transition = "3.5s";
+    bodyBg.style.transition = "2s";
     bodyBg.style.backgroundAttachment= "fixed";
-    let questionBtn = document.createElement("p");
-    questionBtn.innerHTML = "Click Me";
-    document.body.appendChild(questionBtn);
 })
 
 // function ask() {
@@ -102,6 +102,4 @@ startBtn.addEventListener("click", function() {
 
 
 // console.log(correct)
-
-
 
