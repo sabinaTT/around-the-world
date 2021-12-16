@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@400;700&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <title>Around The World</title>
+    
 </head>
-<body>
-    <p id="countdown" style="margin: 0 auto;">1:00</p>
+<body id="background">
+    <p class="countdown" style="margin: 0 auto;">1:00</p>
     <h1>AROUND THE WORLD</h1>
     <div> 
-        <button class="button instruction" style="margin-left: 33%" id="instruction">instructions</button>
+        <button class="button instruction" style="margin-left: 35%" id="instruction">instructions</button>
         <div id="modal-instruct" class="modal">
             <div class="modal-content-instruct">
                 <span class="close">&times;</span>
@@ -30,12 +31,12 @@
                 </ul>
             </div>
         </div>    
-        <button class="button start" style="margin: 0 auto;" id="start">START</button>
+        <button class="button start" style="margin: 0 auto;" id="start" onclick="style.display ='none';">START</button>
         <button class="button about" style="margin: 0 auto;" id="about">about</button>
         <div id="modal-about" class="modalAbout">
             <div class="modal-content-about">
                 <span class="close-about">&times;</span>
-                    <p>Here's some text</p>   
+                    <p>Put some text here, please!</p>   
             </div>
         </div> 
     </div>

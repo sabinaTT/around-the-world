@@ -1,10 +1,9 @@
-body {
+#background {
     background-image: url("https://live.staticflickr.com/117/278609966_8748dce899_b.jpg");
     /* margin: 20px; */
     background-size: cover;
     /* background-position: center;
     background-attachment: fixed; */
-    border-color: white;
     -webkit-background-composite: border;
 }
 h1 {
@@ -19,14 +18,14 @@ h1 {
     text-shadow: -1px 10px 0 rgba(101, 117, 124, 0.295);
     margin-bottom: 50px;
 }
-button {
+.button {
     background-color: whitesmoke;
     border: none;
     color: black;
     /* display: inline-block; */
     border-radius: 50%;
     font-family: 'Bree Serif', serif;
-
+    margin: 0 auto;
 }
   .start {
     height: 175px;
@@ -92,7 +91,8 @@ button {
 }
 
 /* The Close Button */
-.close {
+.close,
+.close-about {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -113,19 +113,12 @@ button {
 }
 .modal-content-about {
   background-color: #fefefe;
-  margin: 20% auto; /* 15% from the top and centered */
+  margin: 20% auto; /* 20% from the top and centered */
   padding: 10px;
   border: 2px solid rgb(61, 144, 165, 0.5);
   width:  45%; /* Could be more or less, depending on screen size */
   border-radius: 10px;
 }
-.close-about {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
 .close:hover,
 .close:focus,
 .close-about:hover,
@@ -136,7 +129,7 @@ button {
 }
 
 /* Timer */
-#countdown {
+.countdown {
   background-color: rgb(217, 241, 247) ;
   border-radius: 50px;
   /* display: inline-flex;
@@ -148,3 +141,12 @@ button {
   text-align: center;
 }
 
+/* Background Images */
+.replacedBodyBackground {
+  background-image: url("images/seattle\ -\ mt\ rainier\ 2.webp";
+  /* margin: 20px; */
+  background-size: cover;
+  /* background-position: center;
+  background-attachment: fixed; */
+  -webkit-background-composite: border;
+};

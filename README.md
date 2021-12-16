@@ -25,10 +25,15 @@
 
 -set up variables
     -winning conditions
+    -homepage
+        -start button
+        -instruction button
+        -about button
+        -title (h1)
 
 -set up functions
     -homepage:  
-        -when user clicks instructions/about, modal box needs to pop up with content inside
+        -when user clicks instructions/about, modal box needs to pop up with content inside - done!
         -
 
     -reset function
