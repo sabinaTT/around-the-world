@@ -7,6 +7,7 @@ const image1 = document.getElementById("image1")
 const bodyBg = document.getElementById("background");
 
 document.querySelector(".countdown").style.display = "none";
+
 /* Instruction Button */
 // get the modal
 let modal = document.getElementById("modal-instruct");
@@ -77,17 +78,23 @@ function updateCountdown() {
 
 startBtn.addEventListener("click", function() {
     countdown.style.display = "block";
+    
 })
-startBtn.addEventListener("click", timer);
+
 startBtn.addEventListener("click", function() {
     instructionButton.style.display = "none";
     abtButton.style.display ="none";
     bodyBg.style.backgroundImage= "url('images/cappadocia - the one.jpeg')";
     title.style.color = "brown";
-    title.style.transition = "3.5s";
+    title.style.fontSize = "55px";
+    title.style.marginTop = "-45px";
+    title.style.marginRight = "5px";
+    title.style.textAlign ="right";
+    title.style.transition = "1s";
     bodyBg.style.transition = "2s";
-    bodyBg.style.backgroundAttachment= "fixed";
+    bodyBg.style.backgroundSize= "cover auto";
 })
+startBtn.addEventListener("click", timer);
 
 // function ask() {
 //     let a = Math.floor(Math.random() * 10) + 1;
