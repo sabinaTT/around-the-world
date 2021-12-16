@@ -27,6 +27,10 @@
     -winning conditions
 
 -set up functions
+    -homepage:  
+        -when user clicks instructions/about, modal box needs to pop up with content inside
+        -
+
     -reset function
         -resets the game back to empty
         -changes gameActive to true

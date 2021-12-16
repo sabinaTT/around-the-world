@@ -4,7 +4,7 @@
 let modal = document.getElementById("modal-instruct");
 
 // get the button that opens the modal
-let instructionButton = document.querySelector(".instruction");
+let instructionButton = document.querySelector("#instruction");
 
 // get the <span> element that closes the modal
 let span = document.querySelector(".close");
@@ -30,6 +30,34 @@ window.onclick = function(event) {
 
 /* About Button */
 
+// get the modal
+let modalAbt = document.getElementById("modal-about");
+
+// get the button that opens the modal
+let abtButton = document.querySelector("#about");
+
+// get the <span> element that closes the modal
+let spanAbt = document.querySelector(".close-about");
+
+// when the user click on the button, open the modal
+abtButton.onclick = function() {
+    modalAbt.style.display ="block";
+};
+
+// When the user clicks on <span> (x), close the modal
+spanAbt.onclick = function() {
+    modalAbt.style.display = "none";
+};
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modalAbt) {
+        modalAbt.style.display ="none";
+    } 
+};
+
+
 
 /* Timer */
 const startingMinute = 1;
@@ -50,6 +78,4 @@ function updateCountdown() {
 };
 
 /* Move the Title */
-const title = document.querySelector("h1");
-
 
