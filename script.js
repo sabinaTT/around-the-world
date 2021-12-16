@@ -3,6 +3,8 @@ const instructionButton = document.querySelector("#instruction");
 const abtButton = document.querySelector("#about");
 const countdown = document.querySelector(".countdown");
 const title = document.querySelector("h1");
+const image1 = document.getElementById("image1")
+const bodyBg = document.getElementById("background");
 
 document.querySelector(".countdown").style.display = "none";
 /* Instruction Button */
@@ -80,6 +82,26 @@ startBtn.addEventListener("click", timer);
 startBtn.addEventListener("click", function() {
     instructionButton.style.display = "none";
     abtButton.style.display ="none";
-
+    bodyBg.style.backgroundImage= "url('images/cappadocia - the one.jpeg')";
+    bodyBg.style.backgroundAttachment= "fixed";
+    let questionBtn = document.createElement("p");
+    questionBtn.innerHTML = "Click Me";
+    document.body.appendChild(questionBtn);
 })
+
+// function ask() {
+//     let a = Math.floor(Math.random() * 10) + 1;
+//     let b = Math.floor(Math.random() * 10) + 1;
+//     let op = ["*", "+", "/", "-"][Math.floor(Math.random() * 4)];
+//     return prompt(`How much is ${a} + ${b}?`) == eval (a + op + b);
+
+// }
+//     let questions = [ask(), ask(), ask(), ask(), ask(), ask(), ask()],
+//         total = questions.length,
+//         correct = questions.filter(Boolean).length;
+
+
+// console.log(correct)
+
+
 

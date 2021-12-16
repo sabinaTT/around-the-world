@@ -142,7 +142,7 @@ h1 {
 }
 
 /* Background Images */
-.replacedBodyBackground {
+#image1 {
   background-image: url("images/seattle\ -\ mt\ rainier\ 2.webp";
   /* margin: 20px; */
   background-size: cover;
