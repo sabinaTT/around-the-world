@@ -15,7 +15,7 @@
     -there needs to be a submit or enter button
     -there needs to be reset button (to reset when I lose, not when game is successfully finished)
     -there needs to be a box with the question
-    -there needs to be an about box describing the point of this game
+    -there needs to be a about box describing the point of this game
     -there needs to be a timer for 1 minute that starts as soon as the person click the input box
     -there needs to be a start button 
     -there needs to be an instructios button that will open into a dialogue box that can be x'ed out
@@ -30,6 +30,9 @@
         -instruction button
         -about button
         -title (h1)
+    1st page
+        -question 1
+        -answer1
 
 -set up functions
     -homepage:  

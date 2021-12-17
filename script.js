@@ -5,8 +5,24 @@ const countdown = document.querySelector(".countdown");
 const title = document.querySelector("h1");
 const image1 = document.getElementById("image1")
 const bodyBg = document.getElementById("background");
+const timesUp = "";
+const question1 = "";   
+const question2 = "";
+const question3 = "";
+const question4 = "";
+const question5 = "";
+const question6 = "";
+const question7 = "";
+const question8 = "";
+const question9 = "";
+const question10 = "";
+let img1 = document.createElement("img1").src = "http://path/to/image";
+
+
+
 
 document.querySelector(".countdown").style.display = "none";
+
 
 /* Instruction Button */
 // get the modal
@@ -84,17 +100,19 @@ startBtn.addEventListener("click", function() {
 startBtn.addEventListener("click", function() {
     instructionButton.style.display = "none";
     abtButton.style.display ="none";
-    bodyBg.style.backgroundImage= "url('images/cappadocia - the one.jpeg')";
-    title.style.color = "brown";
+    bodyBg.style.backgroundImage= "url('images/switzerland 1.jpeg')";
+    title.style.color = "rgb(61, 144, 100, 0.1)";
     title.style.fontSize = "55px";
     title.style.marginTop = "-45px";
     title.style.marginRight = "5px";
     title.style.textAlign ="right";
-    title.style.transition = "1s";
-    bodyBg.style.transition = "2s";
+    title.style.transition = "2s";
+    bodyBg.style.transition = "3s";
     bodyBg.style.backgroundSize= "cover auto";
 })
 startBtn.addEventListener("click", timer);
+
+
 
 // function ask() {
 //     let a = Math.floor(Math.random() * 10) + 1;
@@ -110,3 +128,39 @@ startBtn.addEventListener("click", timer);
 
 // console.log(correct)
 
+
+// function createQuestion() {
+//     let formBox = document.querySelector 
+// }
+// function ask() {
+//     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+//     for (let i =0; i<12; i++) {
+//     let sum = 
+// }
+// }
+
+function generateProblem() {
+    // creates a random number from 1-12
+    let randNum1 = Math.floor(Math.random() * 12) + 1;
+    let randNum2 = Math.floor(Math.random() * 12) + 1;
+
+    // creates a random operator
+    let op = ["-", "+", "*"][Math.floor(Math.random() * 3)];
+
+    return {number1: randNum1, operator: op, number2: randNum2};
+}
+let problemList = [
+    generateProblem(),
+    generateProblem(),
+    generateProblem(),
+    generateProblem(),
+    generateProblem(),
+    generateProblem(),
+    generateProblem(),
+    generateProblem(),
+    generateProblem(),
+    generateProblem()
+
+];
+
+console.log(problemList )
