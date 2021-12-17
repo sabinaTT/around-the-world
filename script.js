@@ -22,7 +22,7 @@ let img1 = document.createElement("img1").src = "http://path/to/image";
 
 
 document.querySelector(".countdown").style.display = "none";
-
+document.querySelector(".questionBox").style.display= "none";
 
 /* Instruction Button */
 // get the modal
@@ -92,12 +92,13 @@ function updateCountdown() {
 };
 }
 
-startBtn.addEventListener("click", function() {
-    countdown.style.display = "block";
+// when clicking start button,  timer appears, buttons disappear, background changes and title moves to upper right corner
+function firstQuestion() {
     
-})
+}
 
 startBtn.addEventListener("click", function() {
+    countdown.style.display = "block";
     instructionButton.style.display = "none";
     abtButton.style.display ="none";
     bodyBg.style.backgroundImage= "url('images/switzerland 1.jpeg')";
@@ -111,6 +112,7 @@ startBtn.addEventListener("click", function() {
     bodyBg.style.backgroundSize= "cover auto";
 })
 startBtn.addEventListener("click", timer);
+startBtn.addEventListener("click", firstQuestion)
 
 
 
@@ -160,7 +162,5 @@ let problemList = [
     generateProblem(),
     generateProblem(),
     generateProblem()
-
 ];
-
-console.log(problemList )
+// create a form box and submit button
