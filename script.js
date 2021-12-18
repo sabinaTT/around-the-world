@@ -181,43 +181,60 @@ startBtn.addEventListener("click", function() {
 //     return randNum1 - randNum2
 // };
 
-let randNum1 = Math.floor(Math.random() * 12) + 1;
-let randNum2 = Math.floor(Math.random() * 12) + 1;
+
 let userInput = document.querySelector("input").innerText 
 console.log(userInput)
 
 
-let ans1 = question1();
-console.log(ans1)
 
 if (userInput > 0 ) {
     console.log("you're incorrect")
 }
 
-let questions = document.querySelector(".ask-question").innerText = `What is ${randNum1} x ${randNum2}?`;
+
 
 
 // the questions
+
+let randNum1 = Math.floor(Math.random() * 12) + 1;
+let randNum2 = Math.floor(Math.random() * 12) + 1;
+
 function question1() {
     return randNum1 * randNum2;
 };
+let ans1 = question1();
+
+
+
 function question2() {
     return randNum1 + randNum2;
 };
+let ans2 = question2();
 function question3() {
     return randNum1 - randNum2;
 };
+let ans3 = question3();
 function question4() {
     return randNum1 - randNum2;
 };
+let ans4 = question4();
 function question5() {
     return randNum1 * randNum2;
 };
+let ans5 = question5();
 function question6() {
     return randNum1 + randNum2;
 };
+let ans6 = question6();
 
 
+function multiply() {
+document.querySelector("")
+let multiply = document.querySelector(".ask-question").innerText = `${randNum1} x ${randNum2} = ?`;
+}
+
+let add = document.querySelector(".ask-question").innerText = `${randNum1} x ${randNum2} = ?`;
+let subtract = document.querySelector(".ask-question").innerText = `${randNum1} x ${randNum2} = ?`;
 
 
-
+console.log(ans6)   

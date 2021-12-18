@@ -150,3 +150,7 @@ h1 {
   background-attachment: fixed; */
   -webkit-background-composite: border;
 };
+
+.question-box {
+  color: black;
+}
