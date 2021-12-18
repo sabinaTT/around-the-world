@@ -183,22 +183,41 @@ startBtn.addEventListener("click", function() {
 
 let randNum1 = Math.floor(Math.random() * 12) + 1;
 let randNum2 = Math.floor(Math.random() * 12) + 1;
-let userInput = document.querySelector("input").innerText = " ";
-function question1() {
-    return randNum1 * randNum2;   
-};
+let userInput = document.querySelector("input").innerText 
+console.log(userInput)
+
+
 let ans1 = question1();
 console.log(ans1)
 
-if (userInput === ans1) {
-    console.log("you're correct")
+if (userInput > 0 ) {
+    console.log("you're incorrect")
 }
 
-let firstQuestion = document.querySelector(".ask-question").innerText = `What is ${randNum1} x ${randNum2}?`;
-console.log(firstQuestion)
+let questions = document.querySelector(".ask-question").innerText = `What is ${randNum1} x ${randNum2}?`;
 
-function correct() {
-    if (userInput === ans1) {
-        console.log("you're correcto")
-    }
-}
+
+// the questions
+function question1() {
+    return randNum1 * randNum2;
+};
+function question2() {
+    return randNum1 + randNum2;
+};
+function question3() {
+    return randNum1 - randNum2;
+};
+function question4() {
+    return randNum1 - randNum2;
+};
+function question5() {
+    return randNum1 * randNum2;
+};
+function question6() {
+    return randNum1 + randNum2;
+};
+
+
+
+
+
