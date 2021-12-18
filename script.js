@@ -6,23 +6,23 @@ const title = document.querySelector("h1");
 const image1 = document.getElementById("image1")
 const bodyBg = document.getElementById("background");
 const timesUp = "";
-const question1 = "";   
-const question2 = "";
-const question3 = "";
-const question4 = "";
-const question5 = "";
-const question6 = "";
-const question7 = "";
-const question8 = "";
-const question9 = "";
-const question10 = "";
+// const question1 = "";   
+// const question2 = "";
+// const question3 = "";
+// const question4 = "";
+// const question5 = "";
+// const question6 = "";
+// const question7 = "";
+// const question8 = "";
+// const question9 = "";
+// const question10 = "";
 let img1 = document.createElement("img1").src = "http://path/to/image";
 
 
 
 
 document.querySelector(".countdown").style.display = "none";
-document.querySelector(".questionBox").style.display= "none";
+document.querySelector(".question-box").style.display= "none";
 
 /* Instruction Button */
 // get the modal
@@ -93,9 +93,6 @@ function updateCountdown() {
 }
 
 // when clicking start button,  timer appears, buttons disappear, background changes and title moves to upper right corner
-function firstQuestion() {
-    
-}
 
 startBtn.addEventListener("click", function() {
     countdown.style.display = "block";
@@ -112,7 +109,7 @@ startBtn.addEventListener("click", function() {
     bodyBg.style.backgroundSize= "cover auto";
 })
 startBtn.addEventListener("click", timer);
-startBtn.addEventListener("click", firstQuestion)
+
 
 
 
@@ -140,7 +137,7 @@ startBtn.addEventListener("click", firstQuestion)
 //     let sum = 
 // }
 // }
-
+/*
 function generateProblem() {
     // creates a random number from 1-12
     let randNum1 = Math.floor(Math.random() * 12) + 1;
@@ -163,4 +160,45 @@ let problemList = [
     generateProblem(),
     generateProblem()
 ];
+console.log(problemList)
+
+*/
 // create a form box and submit button
+
+startBtn.addEventListener("click", function() {
+    document.querySelector(".question-box").style.display= "block";
+})
+
+
+// function multiply() {
+//    return randNum1 * randNum2
+// };
+
+// function add() {
+//     return randNum1 + randNum2
+// };
+// function subtract() {
+//     return randNum1 - randNum2
+// };
+
+let randNum1 = Math.floor(Math.random() * 12) + 1;
+let randNum2 = Math.floor(Math.random() * 12) + 1;
+let userInput = document.querySelector("input").innerText = " ";
+function question1() {
+    return randNum1 * randNum2;   
+};
+let ans1 = question1();
+console.log(ans1)
+
+if (userInput === ans1) {
+    console.log("you're correct")
+}
+
+let firstQuestion = document.querySelector(".ask-question").innerText = `What is ${randNum1} x ${randNum2}?`;
+console.log(firstQuestion)
+
+function correct() {
+    if (userInput === ans1) {
+        console.log("you're correcto")
+    }
+}
