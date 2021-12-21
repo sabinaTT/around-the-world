@@ -167,96 +167,21 @@ startBtn.addEventListener("click", function() {
 })
 
 
-// function multiply() {
-//    return randNum1 * randNum2
-// };
 
-// function add() {
-//     return randNum1 + randNum2
-// };
-// function subtract() {
-//     return randNum1 - randNum2
-// };
-
-
-
-
-
-
-
-// the questions
-
-// let randNum1 = Math.floor(Math.random() * 12) + 1;
-// let randNum2 = Math.floor(Math.random() * 12) + 1;
-
-
-
-// question 1
-// function question1() {
-//     let multiply = document.querySelector(".ask-question");
-//     multiply.innerText = `${randNum1} x ${randNum2} = ?`;
-//     return randNum1 * randNum2; 
-// };
-// let ans1 = question1();
-// console.log("ans1", ans1)
-
-
-// question 2
-
-// let randNum1 = Math.floor(Math.random() * 12) + 1;
-// let randNum2 = Math.floor(Math.random() * 12) + 1;
-// let userInput = document.querySelector("#question-input").value;
-/*
-function question2() {
-    let add = document.querySelector(".ask-question").innerText = `${randNum1} + ${randNum2} = ?`;
-    // let userInput = document.querySelector("#question-input").value;
-    let answer2 = randNum1 + randNum2;
-    let tOf = true; 
-    console.log(userInput);
-    if (userInput != answer2) {
-        return tOf = false;
-    } else {
-        return tOf;
-    }
-        return tOf;    
-};
-
-
-let ans2 = question2();
-console.log(userInput)
-
-// if (ans2 == userInput) {
-//     console.log("heyyyyoooo")
-// }
-
-*/
 
 let randNum1 = Math.floor(Math.random() * 12) + 1;
 let randNum2 = Math.floor(Math.random() * 12) + 1;
-let userInput = document.querySelector("#question-input");
+let randNum3 = Math.floor(Math.random() * 12) + 1;
+let randNum4 = Math.floor(Math.random() * 12) + 1;
+let randNum5 = Math.floor(Math.random() * 12) + 1;
+let randNum6 = Math.floor(Math.random() * 12) + 1;
+let randNum7 = Math.floor(Math.random() * 12) + 1;
+let randNum8 = Math.floor(Math.random() * 12) + 1;
+let randNum9 = Math.floor(Math.random() * 12) + 1;
+let randNum10 = Math.floor(Math.random() * 12) + 1;
+// let userInput = document.querySelector("#question-input");
 // console.log(userInput).value
 let submitButton = document.querySelector("#question-submit");
-
-
-
-
-// question 3
-function question3() {
-    let subtract = document.querySelector(".ask-question")
-    subtract.innerText = `${randNum1} - ${randNum2} = ?`;
-    return randNum1 - randNum2;
-};
-
-let ans3 = question3();
-document.querySelector(".question-box").addEventListener("submit", function(e) {
-    e.preventDefault();
-    if (ans3 == userInput.value) {
-        console.log('great job')
-    } else {
-        console.log('try again')
-    }
-    console.log(userInput.value)
-})
 
 function question4() {
     let subtract = document.querySelector(".ask-question")
@@ -266,22 +191,132 @@ function question4() {
 let ans4 = question4();
 document.querySelector(".question-box").addEventListener("submit", function(e) {
     e.preventDefault();
-    if (ans4 == userInput.value) {
-        console.log('great job')
-    } else {
-        console.log('try again')
-    }
-    console.log(userInput.value)
+    // if (ans4 == userInput.value) {
+    //     console.log('great job')
+    // } else {
+    //     console.log('try again')
+    // }
+    // console.log(userInput.value)
+})
+
+// question 5
+function question5() {
+    let multiply = document.querySelector(".ask-question");
+    multiply.innerText = `${randNum1} x ${randNum2} = ?`;
+    return randNum1 * randNum2;
+};
+let ans5 = question5();
+document.querySelector(".question-box").addEventListener("submit", function(e) {
+    e.preventDefault();
 })
 
 
+// This is to save an example that works
+// question 3
+function question1() {
+    let multiply = document.querySelector(".ask-question")
+    multiply.innerText = `${randNum1} * ${randNum2} = ?`;
+    return randNum1 * randNum2;
+};
+let ans1 = question1();
+document.querySelector(".question-box").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let userInput1 = document.querySelector("#question-input");
+    if (ans1 == userInput1.value) {
+        console.log("correct 1");
+        function question2() {
+            let add = document.querySelector(".ask-question")
+            add.innerText = `${randNum3} + ${randNum4} = ?`;
+            return randNum3 + randNum4;
+        };
+            let ans2 = question2(); 
+            document.querySelector(".question-box").addEventListener("submit", function(e) {
+                e.preventDefault();
+                let userInput2 = document.querySelector("#question-input");
+                if (ans2 == userInput2.value) {
+                    console.log("correct 2");
+                    function question3() {
+                        let subtract = document.querySelector(".ask-question");
+                        subtract.innerText = `${randNum5} - ${randNum6} = ?`;
+                        return randNum5 - randNum6;
+                    };
+                        let ans3 = question3();
+                        document.querySelector(".question-box").addEventListener("submit", function(e) {
+                            e.preventDefault();
+                            let userInput3 = document.querySelector("#question-input");
+                            if (ans3 == userInput3.value) {
+                                console.log("correct 3");
+                                function question4() {
+                                    let subtract = document.querySelector(".ask-question");
+                                    subtract.innerText = `${randNum7} - ${randNum8} = ?`;
+                                    return randNum7 - randNum8;
+                                };
+                                    let ans4 = question4();
+                                    document.querySelector(".question-box").addEventListener("submit", function(e) {
+                                        e.preventDefault();
+                                        let userInput4 = document.querySelector("#question-input");
+                                        if(ans4 == userInput4.value) {
+                                            console.log("correct 4");
+                                        } else {
+                                            console.log("wrong 4")
+                                        }
+                                    })
+                            } else {
+                                console.log("wrong 3")
+                            }
+                        })
+                } else {
+                    console.log("wrong 2")
+                }
+        });
+    } else {
+        console.log("wrong 1")
+    }
+    // console.log(userInput.value)
+})
 
 
+/*
+function question3() {
+    let subtract = document.querySelector(".ask-question")
+    subtract.innerText = `${randNum1} - ${randNum2} = ?`;
+    return randNum1 - randNum2;
 
+};
+let ans3 = question3();
+let questionThree = document.querySelector(".question-box").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let userInput = document.querySelector("#question-input");
+    if (ans3 == userInput.value) {
+        console.log('correcto', ans3)
+        return true;
+    } else {
+        console.log('noooooooooo')
+        return false;
+    }
+    // console.log(userInput.value)
+});
 
+*/
 
-
- 
+/*
+function question5() {
+    let multiply = document.querySelector(".ask-question");
+    multiply.innerText = `${randNum1} x ${randNum2} = ?`;
+    return randNum1 * randNum2;
+};
+let ans5 = question5();
+document.querySelector(".question-box").addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (ans5 == userInput.value) {
+        console.log('correct')
+    } else {
+        console.log("next time")
+    }
+    return;
+    // console.log(userInput.value)
+})
+*/
 
 
 
@@ -294,12 +329,7 @@ function question4() {
 let ans4 = question4();
 
 
-// question 5
-function question5() {
-    let multiply = document.querySelector(".ask-question").innerText = `${randNum1} x ${randNum2} = ?`;
-    return randNum1 * randNum2;
-};
-let ans5 = question5();
+
 
 // question 6
 function question6() {
