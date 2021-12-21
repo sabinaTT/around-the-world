@@ -7,21 +7,9 @@ const image1 = document.getElementById("image1")
 const bodyBg = document.getElementById("background");
 const timesUp = "";
 const formBox = document.querySelector(".question-box");
-// const question1 = "";   
-// const question2 = "";
-// const question3 = "";
-// const question4 = "";
-// const question5 = "";
-// const question6 = "";
-// const question7 = "";
-// const question8 = "";
-// const question9 = "";
-// const question10 = "";
 let img1 = document.createElement("img1").src = "http://path/to/image";
 document.querySelector(".countdown").style.display = "none";
 document.querySelector(".question-box").style.display= "none";
-
-
 
 /* Instruction Button */
 // get the modal
