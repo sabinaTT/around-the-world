@@ -284,6 +284,8 @@ function question1() {
         userInput1 = document.querySelector("#question-input");
         if ((ans1 == userInput1.value)) {
         bodyBg.style.backgroundImage= "url('images/seattle - mt rainier 3.jpeg')";
+        bodyBg.style.transition = "3s";
+        bodyBg.style.backgroundSize= "cover";
         console.log("correct 1");
         function question2() {
             let add = document.querySelector(".ask-question")
@@ -359,7 +361,6 @@ function question1() {
                 }
         });
     } else {
-        gohome()
         console.log("wrong 1")
     }
 })
