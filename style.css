@@ -6,6 +6,40 @@
     background-attachment: fixed; */
     -webkit-background-composite: border;
 }
+#restart-container {
+  color: rgb(24, 24, 39);
+  padding: 10px;
+  border-radius: 15px;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(193, 226, 240, 0.5);
+  display: none;
+}
+.restartbtn {
+  margin: 15px 0px 15px 0px;
+  font-size: 40px;
+  border-radius: 10px;
+  border-color: rgb(145, 147, 150) 4px;
+  font-family: 'Bree Serif', serif;
+  background-color: gba(250, 250, 250);
+  width: 180px;
+  height: 60px;
+  color:rgb(255, 255, 255);
+  background-color: rgb(100, 100, 145);
+}
+#congrats-box {
+  display: none;
+  background-color: rgba(235, 150, 101, 0.671);
+  border-radius: 50%;
+  height: 375px;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -45px;
+  padding-top: 25px;
+}
 h1 {
     text-align: center;
     padding-top: 0px;
@@ -150,5 +184,3 @@ h1 {
   background-attachment: fixed; */
   -webkit-background-composite: border;
 };
-
-

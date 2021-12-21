@@ -107,68 +107,11 @@ startBtn.addEventListener("click", function() {
 })
 startBtn.addEventListener("click", timer);
 
-
-
-
-// function ask() {
-//     let a = Math.floor(Math.random() * 10) + 1;
-//     let b = Math.floor(Math.random() * 10) + 1;
-//     let op = ["*", "+", "/", "-"][Math.floor(Math.random() * 4)];
-//     let multiply = document.querySelector(".ask-question").innerText = `${randNum1} x ${randNum2} = ?`;
-//     return prompt(`How much is ${a} + ${b}?`) == eval (a + op + b);
-
-// }
-//     let questions = [ask(), ask(), ask(), ask(), ask(), ask(), ask()],
-//         total = questions.length,
-//         correct = questions.filter(Boolean).length;
-
-
-// console.log(correct)
-
-
-// function createQuestion() {
-//     let formBox = document.querySelector 
-// }
-// function ask() {
-//     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-//     for (let i =0; i<12; i++) {
-//     let sum = 
-// }
-// }
-/*
-function generateProblem() {
-    // creates a random number from 1-12
-    let randNum1 = Math.floor(Math.random() * 12) + 1;
-    let randNum2 = Math.floor(Math.random() * 12) + 1;
-
-    // creates a random operator
-    let op = ["-", "+", "*"][Math.floor(Math.random() * 3)];
-
-    return {number1: randNum1, operator: op, number2: randNum2};
-}
-let problemList = [
-    generateProblem(),
-    generateProblem(),
-    generateProblem(),
-    generateProblem(),
-    generateProblem(),
-    generateProblem(),
-    generateProblem(),
-    generateProblem(),
-    generateProblem(),
-    generateProblem()
-];
-console.log(problemList)
-
-*/
 // create a form box and submit button
 
 startBtn.addEventListener("click", function() {
     document.querySelector(".question-box").style.display= "block";
 })
-
-
-
 
 let randNum1 = Math.floor(Math.random() * 12) + 1;
 let randNum2 = Math.floor(Math.random() * 12) + 1;
@@ -183,35 +126,6 @@ let randNum10 = Math.floor(Math.random() * 12) + 1;
 // let userInput = document.querySelector("#question-input");
 // console.log(userInput).value
 let submitButton = document.querySelector("#question-submit");
-
-function question4() {
-    let subtract = document.querySelector(".ask-question")
-    subtract.innerText = `${randNum1} - ${randNum2} = ?`;
-    return randNum1 - randNum2;
-};
-let ans4 = question4();
-document.querySelector(".question-box").addEventListener("submit", function(e) {
-    e.preventDefault();
-    // if (ans4 == userInput.value) {
-    //     console.log('great job')
-    // } else {
-    //     console.log('try again')
-    // }
-    // console.log(userInput.value)
-})
-
-// question 5
-function question5() {
-    let multiply = document.querySelector(".ask-question");
-    multiply.innerText = `${randNum1} x ${randNum2} = ?`;
-    return randNum1 * randNum2;
-};
-let ans5 = question5();
-document.querySelector(".question-box").addEventListener("submit", function(e) {
-    e.preventDefault();
-})
-
-
 
 /*  Another way of doing it but doesn't work
 document.querySelector(".question-box").addEventListener("submit", function(e) {
@@ -255,22 +169,11 @@ let dne = true;
             console.log('incorrect2')
             dne = false;
         }
-        
-        
-    
-    
     }
 })
 */
 
-function gohome() {
 
-    const restartBtn = document.querySelector("#question-submit");
-    restartBtn.innerText = "RESTART";
-    restartBtn.addEventListener("click", function() {
-        window.location.href="index.html";
-    })
-}
 // This is to save an example that works
 // question 3
 function question1() {
@@ -298,6 +201,8 @@ function question1() {
                 userInput2 = document.querySelector("#question-input");
                 if ((ans2 == userInput2.value)) {
                     bodyBg.style.backgroundImage= "url('images/italy - tuscany 1.jpeg')"; 
+                    bodyBg.style.transition = "3s";
+                    bodyBg.style.backgroundSize= "cover";
                     console.log("correct 2");
                     function question3() {
                         let subtract = document.querySelector(".ask-question");
@@ -310,6 +215,8 @@ function question1() {
                             let userInput3 = document.querySelector("#question-input");
                             if (ans3 == userInput3.value) {
                                 bodyBg.style.backgroundImage= "url('images/egypt -2.jpeg')"; 
+                                bodyBg.style.backgroundSize = "cover";
+                                bodyBg.style.transition = "3s";
                                 console.log("correct 3");
                                 function question4() {
                                     let subtract = document.querySelector(".ask-question");
@@ -321,7 +228,9 @@ function question1() {
                                         e.preventDefault();
                                         let userInput4 = document.querySelector("#question-input");
                                         if(ans4 == userInput4.value) {
-                                            bodyBg.style.backgroundImage= "url('images/egypt -2.jpeg')"; 
+                                            bodyBg.style.backgroundImage= "url('images/italy - como.jpeg')"; 
+                                            bodyBg.style.transition = "3s";
+                                            bodyBg.style.backgroundSize= "cover";
                                             console.log("correct 4"); 
                                             function question5() {
                                                 let multiply = document.querySelector(".ask-question")
@@ -334,118 +243,58 @@ function question1() {
                                                     let userInput5 = document.querySelector("#question-input");
                                                     if (ans5 == userInput5.value) {
                                                         console.log("correct 5");
+                                                        userWon();
                                                         bodyBg.style.backgroundImage= "url('images/cappadocia - the one.jpeg')";
                                                         title.style.color = "rgb(61, 144, 100, 0.1)";
-                                                        countdown.style.display = "none";
-                                                        title.style.fontSize = "55px";
+                                                        title.style.fontSize = "90px";
                                                         title.style.textAlign = "center";
-                                                        title.style.marginTop = "30px";
+                                                        title.style.paddingTop = "50px";
                                                         title.style.transition = "2s";
                                                         bodyBg.style.transition = "3s";
                                                         bodyBg.style.backgroundSize= "cover auto";
-                                                        formBox.style.display = "none";
+
                                                     } else {
+                                                        // gohome()
                                                         console.log("wrong 5")
                                                     }
                                                 })
                                         } else {
+                                            // gohome()
                                             console.log("wrong 4")
                                         }
                                     })
                             } else {
+                                // gohome()
                                 console.log("wrong 3")
                             }
                         })
                 } else {
+                    // gohome()
                     console.log("wrong 2")
                 }
         });
     } else {
+        // gohome()
         console.log("wrong 1")
     }
 })
 
-
-/*
-function question5() {
-    let multiply = document.querySelector(".ask-question");
-    multiply.innerText = `${randNum1} x ${randNum2} = ?`;
-    return randNum1 * randNum2;
-};
-let ans5 = question5();
-document.querySelector(".question-box").addEventListener("submit", function(e) {
-    e.preventDefault();
-    if (ans5 == userInput.value) {
-        console.log('correct')
-    } else {
-        console.log("next time")
-    }
-    return;
-    // console.log(userInput.value)
-})
-*/
-
-
-
-/*
-// question 4
-function question4() {
-    let subtract = document.querySelector(".ask-question").innerText = `${randNum1} - ${randNum2} = ?`;
-    return randNum1 - randNum2;
-};
-let ans4 = question4();
-
-
-
-
-// question 6
-function question6() {
-    let add = document.querySelector(".ask-question").innerText = `${randNum1} + ${randNum2} = ?`;
-    return randNum1 + randNum2;
-};
-let ans6 = question6();
- 
-
-*/
-
-// function ask() {
-
-
-//     return prompt(`How much is ${a} + ${b}?`) == eval (a + op + b);
-
-// }
-
-
-
-// console.log(correct)
-/*
-let a = Math.floor(Math.random() * 10) + 1;
-let b = Math.floor(Math.random() * 10) + 1;
-let op = ["*", "+", "-"][Math.floor(Math.random() * 3)];
-
-
-//     return prompt(`How much is ${a} + ${b}?`) == eval (a + op + b);
-
-// }
-//     let questions = [ask(), ask(), ask(), ask(), ask(), ask(), ask()],
-//         total = questions.length,
-//         correct = questions.filter(Boolean).length;
-
-function ask() {
-    let questionBox = document.querySelector(".ask-question")
-    questionBox.innerText = `${a} ${op} ${b} = ?`;
-    // return (a + op + b);
-    
-    // let questions = [ask(), ask(), ask(), ask(), ask(), ask(), ask()],
-    //     total = questions.length,
-    //     correct = questions.filter(Boolean).length;
-
-    // // if (userInput == )
-    console.log(`What is ${a} ${op} ${b}?`)
+function gohome() {
+    formBox.style.display = "none";
+    countdown.style.display = "none";
+    let restartContainer = document.getElementById("restart-container");
+    restartContainer.style.display = "block";
+    let restartBtn = document.querySelector(".restartbtn")
+    restartBtn.addEventListener("click", function() {
+        window.location.href="index.html";
+    })
 }
-let ans1 = ask()
-// console.log(eval(userInput) === (ans1))
 
-*/
+function userWon() {
+    formBox.style.display = "none";
+    countdown.style.display = "none";
+    let congratsBox = document.getElementById("congrats-box");
+    congratsBox.style.display ="block";
+}
 
         
