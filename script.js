@@ -6,6 +6,7 @@ const title = document.querySelector("h1");
 const image1 = document.getElementById("image1")
 const bodyBg = document.getElementById("background");
 const timesUp = "";
+const formBox = document.querySelector(".question-box");
 // const question1 = "";   
 // const question2 = "";
 // const question3 = "";
@@ -70,18 +71,18 @@ window.onclick = function(event) {
 
 /* Timer */
 function timer () {
-const startingMinute = 1;
+let startingMinute = 1;
 let time = startingMinute * 60;
 const countdownEl = document.querySelector(".countdown");
+
 
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
-
     seconds = seconds < 10 ? "0" + seconds : seconds;
-
+    
     countdownEl.innerHTML = `${minutes}:${seconds}`;
     time--; 
     time = time < 0 ? 0 : time;
@@ -211,18 +212,78 @@ document.querySelector(".question-box").addEventListener("submit", function(e) {
 })
 
 
+
+/*  Another way of doing it but doesn't work
+document.querySelector(".question-box").addEventListener("submit", function(e) {
+    e.preventDefault();
+let userInput = document.querySelector("#question-input");
+let dne = true;
+
+    while (dne) {
+        
+        function question1() {
+        let multiply = document.querySelector(".ask-question")
+        multiply.innerText = `${randNum1} * ${randNum2} = ?`;
+        return randNum1 * randNum2; 
+        };
+    
+        let ans1 = question1();
+
+        
+         userInput = document.querySelector("#question-input");
+         
+
+        if (ans1 != userInput.value) {
+            console.log("incorrect1")
+            dne = false;
+        } 
+        else {
+        console.log("correct1")
+        function question2() {
+            let add = document.querySelector(".ask-question")
+            add.innerText = `${randNum3} + ${randNum4} = ?`;
+            return randNum3 + randNum4;
+        };    
+        
+        let ans2 = question2(); 
+    
+        userInput = document.querySelector("#question-input");
+        
+    }
+        if (ans2 != userInput.value) {
+            console.log(ans2)
+            console.log('incorrect2')
+            dne = false;
+        }
+        
+        
+    
+    
+    }
+})
+*/
+
+function gohome() {
+
+    const restartBtn = document.querySelector("#question-submit");
+    restartBtn.innerText = "RESTART";
+    restartBtn.addEventListener("click", function() {
+        window.location.href="index.html";
+    })
+}
 // This is to save an example that works
 // question 3
 function question1() {
     let multiply = document.querySelector(".ask-question")
     multiply.innerText = `${randNum1} * ${randNum2} = ?`;
-    return randNum1 * randNum2;
-};
-let ans1 = question1();
-document.querySelector(".question-box").addEventListener("submit", function(e) {
-    e.preventDefault();
-    let userInput1 = document.querySelector("#question-input");
-    if (ans1 == userInput1.value) {
+    return randNum1 * randNum2; 
+}; 
+    let ans1 = question1();
+    document.querySelector(".question-box").addEventListener("submit", function(e) {
+        e.preventDefault();
+        userInput1 = document.querySelector("#question-input");
+        if ((ans1 == userInput1.value)) {
+        bodyBg.style.backgroundImage= "url('images/seattle - mt rainier 3.jpeg')";
         console.log("correct 1");
         function question2() {
             let add = document.querySelector(".ask-question")
@@ -232,8 +293,9 @@ document.querySelector(".question-box").addEventListener("submit", function(e) {
             let ans2 = question2(); 
             document.querySelector(".question-box").addEventListener("submit", function(e) {
                 e.preventDefault();
-                let userInput2 = document.querySelector("#question-input");
-                if (ans2 == userInput2.value) {
+                userInput2 = document.querySelector("#question-input");
+                if ((ans2 == userInput2.value)) {
+                    bodyBg.style.backgroundImage= "url('images/italy - tuscany 1.jpeg')"; 
                     console.log("correct 2");
                     function question3() {
                         let subtract = document.querySelector(".ask-question");
@@ -245,6 +307,7 @@ document.querySelector(".question-box").addEventListener("submit", function(e) {
                             e.preventDefault();
                             let userInput3 = document.querySelector("#question-input");
                             if (ans3 == userInput3.value) {
+                                bodyBg.style.backgroundImage= "url('images/egypt -2.jpeg')"; 
                                 console.log("correct 3");
                                 function question4() {
                                     let subtract = document.querySelector(".ask-question");
@@ -256,7 +319,33 @@ document.querySelector(".question-box").addEventListener("submit", function(e) {
                                         e.preventDefault();
                                         let userInput4 = document.querySelector("#question-input");
                                         if(ans4 == userInput4.value) {
-                                            console.log("correct 4");
+                                            bodyBg.style.backgroundImage= "url('images/egypt -2.jpeg')"; 
+                                            console.log("correct 4"); 
+                                            function question5() {
+                                                let multiply = document.querySelector(".ask-question")
+                                                multiply.innerText = `${randNum9} * ${randNum10} = ?`;
+                                                return randNum9 * randNum10; 
+                                            };
+                                                let ans5 = question5();
+                                                document.querySelector(".question-box").addEventListener("submit", function(e) {
+                                                    e.preventDefault();
+                                                    let userInput5 = document.querySelector("#question-input");
+                                                    if (ans5 == userInput5.value) {
+                                                        console.log("correct 5");
+                                                        bodyBg.style.backgroundImage= "url('images/cappadocia - the one.jpeg')";
+                                                        title.style.color = "rgb(61, 144, 100, 0.1)";
+                                                        countdown.style.display = "none";
+                                                        title.style.fontSize = "55px";
+                                                        title.style.textAlign = "center";
+                                                        title.style.marginTop = "30px";
+                                                        title.style.transition = "2s";
+                                                        bodyBg.style.transition = "3s";
+                                                        bodyBg.style.backgroundSize= "cover auto";
+                                                        formBox.style.display = "none";
+                                                    } else {
+                                                        console.log("wrong 5")
+                                                    }
+                                                })
                                         } else {
                                             console.log("wrong 4")
                                         }
@@ -270,34 +359,11 @@ document.querySelector(".question-box").addEventListener("submit", function(e) {
                 }
         });
     } else {
+        gohome()
         console.log("wrong 1")
     }
-    // console.log(userInput.value)
 })
 
-
-/*
-function question3() {
-    let subtract = document.querySelector(".ask-question")
-    subtract.innerText = `${randNum1} - ${randNum2} = ?`;
-    return randNum1 - randNum2;
-
-};
-let ans3 = question3();
-let questionThree = document.querySelector(".question-box").addEventListener("submit", function(e) {
-    e.preventDefault();
-    let userInput = document.querySelector("#question-input");
-    if (ans3 == userInput.value) {
-        console.log('correcto', ans3)
-        return true;
-    } else {
-        console.log('noooooooooo')
-        return false;
-    }
-    // console.log(userInput.value)
-});
-
-*/
 
 /*
 function question5() {
@@ -381,3 +447,4 @@ let ans1 = ask()
 
 */
 
+        
