@@ -238,22 +238,45 @@ let userInput = document.querySelector("#question-input");
 let submitButton = document.querySelector("#question-submit");
 
 
+
+
 // question 3
 function question3() {
     let subtract = document.querySelector(".ask-question")
     subtract.innerText = `${randNum1} - ${randNum2} = ?`;
     return randNum1 - randNum2;
 };
+
 let ans3 = question3();
 document.querySelector(".question-box").addEventListener("submit", function(e) {
     e.preventDefault();
     if (ans3 == userInput.value) {
-        console.log("correct!")
+        console.log('great job')
     } else {
         console.log('try again')
     }
     console.log(userInput.value)
 })
+
+function question4() {
+    let subtract = document.querySelector(".ask-question")
+    subtract.innerText = `${randNum1} - ${randNum2} = ?`;
+    return randNum1 - randNum2;
+};
+let ans4 = question4();
+document.querySelector(".question-box").addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (ans4 == userInput.value) {
+        console.log('great job')
+    } else {
+        console.log('try again')
+    }
+    console.log(userInput.value)
+})
+
+
+
+
 
 
 
